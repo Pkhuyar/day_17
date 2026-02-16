@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="GET" class="my-5">
+
+    <input type="number" name="userid" placeholder="give me userid"><br>
+    <input type="submit" value="Submit">
+
+
+</form>
+
+
+{% if posts %}
+{% for post in posts %}
+<div class="card">
+    <div class="card-header">
+        {{ post.title }}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">{{ post.body }}</p>
+        <a href="#" class="btn btn-primary"> {{ post.id }}</a>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endif %}
+
+{% endblock %}

@@ -13,8 +13,6 @@ def deb(name):
     return "The name 5th character is {}".format(name)[5]
 
 
-
-
 # custom error page.
 @app.errorhandler(404)
 def page_400(e):
